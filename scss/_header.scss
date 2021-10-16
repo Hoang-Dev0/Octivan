@@ -1,0 +1,125 @@
+.header {
+  padding: 4rem 0;
+  display: block;
+  &__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 0 7rem;
+  }
+  &__nav-contact {
+    color: $gray-light;
+    font-weight: 400;
+    a {
+      font-weight: 600;
+      margin-left: 1.8rem;
+      color: $gray-dark;
+    }
+  }
+  .icon__search {
+    cursor: pointer;
+  }
+  // icon toggle
+  .icon__menu-hamburger {
+    position: relative;
+    top: 3px;
+    z-index: 1000;
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  .icon__menu-hamburger span {
+    display: block;
+    position: absolute;
+    height: 3.6px;
+    width: 100%;
+    background: $gray-dark;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+  }
+  .icon__menu-hamburger span:nth-child(1) {
+    top: 0px;
+  }
+
+  .icon__menu-hamburger span:nth-child(2),
+  .icon__menu-hamburger span:nth-child(3) {
+    top: 11px;
+  }
+
+  .icon__menu-hamburger span:nth-child(4) {
+    top: 22px;
+  }
+
+  .icon__menu-hamburger.open span:nth-child(1) {
+    top: 33px;
+    width: 0%;
+    left: 50%;
+  }
+
+  .icon__menu-hamburger.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .icon__menu-hamburger.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .icon__menu-hamburger.open span:nth-child(4) {
+    top: 11px;
+    width: 0%;
+    left: 50%;
+  }
+
+  @include maxW(767px) {
+    padding: 1.6rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #fff;
+    &__nav {
+      gap: 0 2rem;
+    }
+    &__nav-contact {
+      display: none;
+    }
+    .icon__search {
+      display: none;
+    }
+    .icon__menu-hamburger {
+      cursor: pointer;
+      display: block;
+    }
+  }
+}

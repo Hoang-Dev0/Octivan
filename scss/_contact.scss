@@ -1,0 +1,79 @@
+.contact {
+  background-image: url("../images/contact-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15rem 0;
+  display: block;
+  &__container {
+    max-width: 61rem;
+  }
+  &__heading {
+    text-align: center;
+    font-size: 3.6rem;
+    line-height: 1.5555555556;
+    font-weight: 400;
+    font-family: $secondary-font;
+    margin-bottom: 3rem;
+    color: white;
+    a {
+      font-weight: 700;
+      color: white;
+    }
+  }
+  &__desc {
+    color: white;
+    font-size: 18px;
+    line-height: 1.8888888889;
+    text-align: center;
+    margin: 0 auto 10rem;
+  }
+  &__field {
+    padding: 20px 30px;
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: border 0.2s linear;
+    &:focus {
+      border-color: white;
+    }
+    background-color: transparent;
+    &::-webkit-input-placeholder {
+      /* Edge */
+      color: white;
+    }
+
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: white;
+    }
+
+    &::placeholder {
+      color: white;
+    }
+  }
+  &__area {
+    resize: none;
+    min-height: 9.8rem;
+    line-height: 1.6;
+  }
+  @include maxW(767px) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    &__heading {
+      font-size: 3rem;
+    }
+    &__desc{
+      margin: 0px auto 4rem;
+
+    }
+    &__form{
+      button{
+        width: 100%;
+      }
+    }
+  }
+}

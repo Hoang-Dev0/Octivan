@@ -1,0 +1,32 @@
+.partner {
+  margin-bottom: 15.2rem;
+  display: block;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10rem 0;
+  }
+  &__item {
+    transition: opacity ease 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__item:hover {
+    opacity: 0.5;
+  }
+
+  @include maxW(1023px) {
+    margin-bottom: 9rem;
+    &__list {
+      gap: 5rem;
+    }
+    
+  }
+  @include maxW(767px) {
+    margin-bottom: 5rem;
+    &__list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+* {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+body {
+  font-family: $primary-font;
+  font-size: 1.6rem;
+  color: $gray-dark;
+}
+
+.app {
+  max-width: 192rem;
+  margin: 0 auto;
+}
+.container {
+  max-width: 121rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: black;
+  font-size: 1.6rem;
+  font-weight: bold;
+  height: 5.4rem;
+  padding-left: 7rem;
+  padding-right: 7rem;
+  border-radius: 0.8rem;
+}
+.btn--primary {
+  background-color: $primary-btn;
+}
+.btn--submit {
+  background: linear-gradient(to right, #f4769f, #ffac3c);
+}
+input,
+button,
+textarea,
+form,
+select {
+  border: 0;
+  outline: none;
+  font-family: $primary-font;
+}
+
+header,section,footer{
+  display: none;
+}
+

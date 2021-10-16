@@ -1,0 +1,51 @@
+.portfolio {
+    margin-bottom: 30rem;
+    display: block;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0 9rem;
+    margin-bottom: 1rem;
+  }
+  &__item{
+      margin-bottom: 9rem;
+  }
+  &__img{
+      margin-bottom: 4rem;
+  }
+  &__heading{
+      color: $gray-dark;
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+  }
+  &__category{
+      color: $gray-light;
+      font-size: 1.4rem;
+  } 
+  &__btn{
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+
+  @include maxW(1023px){
+      margin-bottom: 10rem;
+      &__list{
+          grid-gap: 0 3rem;
+      }
+      &__item {
+          margin-bottom: 5rem;
+      }
+  }
+  @include maxW(767px){
+    margin-bottom: 6rem;
+    &__list{
+        grid-template-columns: 1fr;
+    }
+    &__img{
+        margin-bottom: 2rem;
+    }
+  }
+}

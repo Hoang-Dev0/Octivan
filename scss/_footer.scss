@@ -1,0 +1,137 @@
+.footer {
+  $spacing: 2rem;
+  display: block;
+  &__top {
+    padding: 15rem 0px;
+    background-color: #282f3a;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0 13rem;
+  }
+  &__column {
+    .footer__logo {
+      margin-bottom: 5rem;
+    }
+    .footer__desc {
+      font-size: 1.6rem;
+      margin-bottom: 4rem;
+      color: #6a727f;
+      line-height: 1.8888888889;
+    }
+
+    .socials {
+      display: flex;
+      align-items: center;
+      gap: 0 3rem;
+      .social__item {
+        color: #6a727f;
+        transition: color ease 0.2s;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+
+    .footer__heading {
+      font-size: 1.8rem;
+      color: white;
+      margin-bottom: 4rem;
+      font-weight: bold;
+    }
+
+    // .footer__usefulls{
+
+    // }
+    .footer__usefull a {
+      color: #6a727f;
+      font-size: 1.6rem;
+      padding-bottom: 3rem;
+    }
+    .contact__list {
+      color: #6a727f;
+      font-size: 1.6rem;
+      margin-bottom: 4.4rem;
+
+      .contact__item {
+        margin-bottom: 1.7rem;
+
+        span {
+          color: white;
+        }
+        a {
+          color: #6a727f;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    background-color: #252b36;
+    &-main {
+      position: relative;
+      padding: 6rem 0;
+    }
+
+    .footer__copyright {
+      color: $gray-light;
+      span {
+        color: white;
+      }
+    }
+    .icon-rocket {
+      width: 6.5rem;
+      height: 6.5rem;
+      border-radius: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #4a44f2;
+      color: white;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateY(-50%);
+    }
+  }
+  @include maxW(1023px) {
+    &__list {
+      grid-gap: 0 2rem;
+    }
+    &__bottom-main {
+      padding: 6rem $spacing;
+    }
+    &__top {
+      padding: 10rem 0px;
+    }
+    .icon-rocket {
+      right: $spacing;
+    }
+  }
+
+  @include maxW(767px) {
+    &__list {
+      display: block;
+    }
+    &__column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 6rem;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    &__top {
+      padding: 4rem 0;
+    }
+    &__usefull a {
+      text-align: center;
+      display: block;
+    }
+    &__bottom-main{
+      line-height: 1.8;
+    }
+  }
+}
